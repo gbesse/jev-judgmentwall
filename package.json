@@ -1,0 +1,21 @@
+{
+  "name": "@gbesse/jev-judgmentwall",
+  "version": "0.1.0",
+  "description": "Watch declared Jev criteria resolve in honest request-arrival order and export the verdict wall.",
+  "type": "module",
+  "exports": { ".": { "types": "./src/index.d.mts", "import": "./src/index.mjs" } },
+  "bin": { "jev-judgmentwall": "./bin/jev-judgmentwall.mjs" },
+  "files": ["src", "bin", "web", "packs", "examples", "docs", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "demo": "node examples/demo.mjs",
+    "typecheck": "tsc --noEmit --strict --target ES2022 --module NodeNext docs/public-api-types.mts",
+    "live-smoke": "node scripts/live-smoke.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/gbesse/jev-judgmentwall.git" },
+  "bugs": { "url": "https://github.com/gbesse/jev-judgmentwall/issues" },
+  "devDependencies": { "typescript": "5.9.3" }
+}
